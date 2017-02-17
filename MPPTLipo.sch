@@ -213,7 +213,7 @@ Wire Wire Line
 Wire Wire Line
 	6950 2950 6950 2500
 Wire Wire Line
-	6950 2500 7350 2500
+	6950 2500 8600 2500
 Wire Wire Line
 	7350 2800 7350 2850
 Wire Wire Line
@@ -227,12 +227,12 @@ Wire Wire Line
 $Comp
 L GND #PWR01
 U 1 1 58A34E75
-P 7350 3150
-F 0 "#PWR01" H 7350 2900 50  0001 C CNN
-F 1 "GND" H 7350 3000 50  0000 C CNN
-F 2 "" H 7350 3150 50  0000 C CNN
-F 3 "" H 7350 3150 50  0000 C CNN
-	1    7350 3150
+P 7350 3200
+F 0 "#PWR01" H 7350 2950 50  0001 C CNN
+F 1 "GND" H 7350 3050 50  0000 C CNN
+F 2 "" H 7350 3200 50  0000 C CNN
+F 3 "" H 7350 3200 50  0000 C CNN
+	1    7350 3200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -268,19 +268,113 @@ F 3 "" H 3000 2850 50  0000 C CNN
 	1    3000 2850
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_01X01 P1
-U 1 1 58A35050
-P 3200 2350
-F 0 "P1" H 3200 2450 50  0000 C CNN
-F 1 "CONN_01X01" V 3300 2350 50  0000 C CNN
-F 2 "Connectors:1pin" H 3200 2350 50  0001 C CNN
-F 3 "" H 3200 2350 50  0000 C CNN
-	1    3200 2350
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	4900 2050 3850 2050
 Wire Wire Line
 	5700 2050 5200 2050
+$Comp
+L Lipo Mod1
+U 1 1 58A72DFA
+P 7750 2000
+F 0 "Mod1" H 8100 2550 60  0000 C CNN
+F 1 "Lipo" H 7950 2450 60  0000 C CNN
+F 2 "franzlibtest:LipoProtectPCB" H 7750 1650 60  0001 C CNN
+F 3 "" H 7750 1650 60  0001 C CNN
+	1    7750 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Lipo Mod2
+U 1 1 58A72E7D
+P 7750 2500
+F 0 "Mod2" H 8100 3050 60  0000 C CNN
+F 1 "Lipo" H 7950 2950 60  0000 C CNN
+F 2 "franzlibtest:LipoProtectPCB" H 7750 2150 60  0001 C CNN
+F 3 "" H 7750 2150 60  0001 C CNN
+	1    7750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1650 7350 1650
+Wire Wire Line
+	7350 1650 7350 2150
+Wire Wire Line
+	7350 2150 7550 2150
+Wire Wire Line
+	7550 2300 7200 2300
+Wire Wire Line
+	7200 2300 7200 1800
+Wire Wire Line
+	7200 1800 7550 1800
+Wire Wire Line
+	8400 2300 8500 2300
+Wire Wire Line
+	8500 2300 8500 1800
+Wire Wire Line
+	8400 1800 8600 1800
+Wire Wire Line
+	8400 1650 8600 1650
+Wire Wire Line
+	8600 2150 8400 2150
+$Comp
+L GND #PWR05
+U 1 1 58A730F5
+P 8500 2300
+F 0 "#PWR05" H 8500 2050 50  0001 C CNN
+F 1 "GND" H 8500 2150 50  0000 C CNN
+F 2 "" H 8500 2300 50  0000 C CNN
+F 3 "" H 8500 2300 50  0000 C CNN
+	1    8500 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 2500 8600 2150
+Connection ~ 7350 2500
+$Comp
+L CONN_01X01 P3
+U 1 1 58A731FD
+P 8800 1650
+F 0 "P3" H 8800 1750 50  0000 C CNN
+F 1 "P+" V 8900 1650 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 8800 1650 50  0001 C CNN
+F 3 "" H 8800 1650 50  0000 C CNN
+	1    8800 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P4
+U 1 1 58A733DA
+P 8800 1800
+F 0 "P4" H 8800 1900 50  0000 C CNN
+F 1 "Ü-" V 8900 1800 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 8800 1800 50  0001 C CNN
+F 3 "" H 8800 1800 50  0000 C CNN
+	1    8800 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P1
+U 1 1 58A73459
+P 2800 2550
+F 0 "P1" H 2800 2650 50  0000 C CNN
+F 1 "Solar+" V 2900 2550 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 2800 2550 50  0001 C CNN
+F 3 "" H 2800 2550 50  0000 C CNN
+	1    2800 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 P2
+U 1 1 58A735AB
+P 2800 2850
+F 0 "P2" H 2800 2950 50  0000 C CNN
+F 1 "Solar-" V 2900 2850 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 2800 2850 50  0001 C CNN
+F 3 "" H 2800 2850 50  0000 C CNN
+	1    2800 2850
+	-1   0    0    1   
+$EndComp
+Connection ~ 8500 1800
+Wire Wire Line
+	7350 3150 7350 3200
 $EndSCHEMATC

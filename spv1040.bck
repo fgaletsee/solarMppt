@@ -1,3 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP SPV1040
+D MPPT solar
+K mppt solar lipo
+F en.CD00287506.pdf
+$ENDCMP
+#
 #End Doc Library

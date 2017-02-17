@@ -1,6 +1,23 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
+# Lipo
+#
+DEF Lipo Mod 0 40 Y Y 1 F N
+F0 "Mod" 350 550 60 H V C CNN
+F1 "Lipo" 200 450 60 H V C CNN
+F2 "" 0 -350 60 H I C CNN
+F3 "" 0 -350 60 H I C CNN
+DRAW
+T 0 200 100 60 0 0 0 Protect Normal 0 C C
+S 0 500 450 50 0 1 0 N
+X Bat+ 1 -200 350 200 R 50 50 1 1 I
+X Bat- 2 -200 200 200 R 50 50 1 1 I
+X Pin- 3 650 200 200 L 50 50 1 1 I
+X Pin+ 4 650 350 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # SPV1040
 #
 DEF SPV1040 IC 0 40 Y Y 1 F N
