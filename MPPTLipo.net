@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source /home/argos/Dokumente/Kicad/MPPTLipo/MPPTLipo.sch)
-    (date "Fr 17 Feb 2017 18:11:27 CET")
-    (tool "Eeschema 4.0.5-e0-6337~49~ubuntu16.04.1")
+    (source C:\Users\DeveloperMonday\Documents\Kicad\mppt\MPPTLipo.sch)
+    (date "20.02.2017 22:30:29")
+    (tool "Eeschema (2017-02-12 revision d5bf465)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title "MPPT -Lipostuff")
@@ -64,14 +64,14 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 58A34134))
     (comp (ref D1)
-      (value D_Schottky)
-      (footprint Diodes_SMD:D_0805)
+      (value NSR0530H)
+      (footprint Diodes_SMD:D_SOD-323_HandSoldering)
       (libsource (lib device) (part D_Schottky))
       (sheetpath (names /) (tstamps /))
       (tstamp 58A34225))
     (comp (ref L1)
-      (value L)
-      (footprint Choke_SMD:Choke_SMD_Wuerth-WE-PD-Typ-LS_Handsoldering)
+      (value 33u)
+      (footprint franzlibtest:VLS6045EX)
       (libsource (lib device) (part L))
       (sheetpath (names /) (tstamps /))
       (tstamp 58A3431D))
@@ -121,11 +121,7 @@
     (libpart (lib device) (part C)
       (description "Unpolarized capacitor")
       (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
+        (fp C_*))
       (fields
         (field (name Reference) C)
         (field (name Value) C))
@@ -133,22 +129,21 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
     (libpart (lib conn) (part CONN_01X01)
-      (description "Connector, single row, 01x01")
+      (description "Connector, single row, 01x01, pin header")
       (footprints
-        (fp Pin_Header_Straight_1X01)
-        (fp Pin_Header_Angled_1X01)
-        (fp Socket_Strip_Straight_1X01)
-        (fp Socket_Strip_Angled_1X01))
+        (fp Pin_Header_Straight_1X*)
+        (fp Pin_Header_Angled_1X*)
+        (fp Socket_Strip_Straight_1X*)
+        (fp Socket_Strip_Angled_1X*))
       (fields
-        (field (name Reference) P)
+        (field (name Reference) J)
         (field (name Value) CONN_01X01))
       (pins
         (pin (num 1) (name P1) (type passive))))
     (libpart (lib device) (part D_Schottky)
       (description "Schottky diode")
       (footprints
-        (fp Diode_*)
-        (fp D-*)
+        (fp TO-???*)
         (fp *SingleDiode)
         (fp *_Diode_*)
         (fp *SingleDiode*)
@@ -163,7 +158,9 @@
       (description Inductor)
       (footprints
         (fp Choke_*)
-        (fp *Coil*))
+        (fp *Coil*)
+        (fp Inductor_*)
+        (fp L_*))
       (fields
         (field (name Reference) L)
         (field (name Value) L))
@@ -171,6 +168,8 @@
         (pin (num 1) (name 1) (type passive))
         (pin (num 2) (name 2) (type passive))))
     (libpart (lib spv1040) (part Lipo)
+      (footprints
+        (fp LipoProtectPCB))
       (fields
         (field (name Reference) Mod)
         (field (name Value) Lipo))
@@ -183,7 +182,7 @@
       (description Resistor)
       (footprints
         (fp R_*)
-        (fp Resistor_*))
+        (fp R_*))
       (fields
         (field (name Reference) R)
         (field (name Value) R))
@@ -208,12 +207,12 @@
         (pin (num 7) (name ICRTL_PLUS) (type input))
         (pin (num 8) (name XSHUT) (type input)))))
   (libraries
-    (library (logical device)
-      (uri /usr/share/kicad/library/device.lib))
     (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib))
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\conn.lib"))
+    (library (logical device)
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\device.lib"))
     (library (logical spv1040)
-      (uri /home/argos/Dokumente/Kicad/MPPTLipo/spv1040.lib)))
+      (uri C:\Users\DeveloperMonday\Documents\Kicad\mppt\spv1040.lib)))
   (nets
     (net (code 1) (name GND)
       (node (ref Mod2) (pin 3))

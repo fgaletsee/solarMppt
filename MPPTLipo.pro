@@ -1,4 +1,4 @@
-update=Di 14 Feb 2017 18:41:59 CET
+update=20.02.2017 21:43:43
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=spv1040
+LibName31=video
